@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loren's Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css">
+
+</head>
+<body>
+     
+    <div class="contener">
+        <h1>Loren's Gallery</h1>
+        <div class="image-contener">
+        <div class="image"><img src="https://pbs.twimg.com/media/FOzHdtcakAIl9u7?format=jpg&name=medium" alt=""></div>
+        <div class="image"><img src="https://pbs.twimg.com/media/FOo7OA2aAAAOgU_?format=jpg&name=medium" alt=""></div>
+        <div class="image"><img src="https://pbs.twimg.com/media/FO51PupaMAEMTL1?format=jpg&name=large" alt=""></div>
+        <div class="image"><img src="https://pbs.twimg.com/media/FO_hHhraIAYXV-b?format=jpg&name=medium" alt=""></div>
+        <div class="image"><img src="https://pbs.twimg.com/media/FPC1NSbaUAA1UtB?format=jpg&name=medium" alt=""></div>
+        <div class="image"><img src="https://pbs.twimg.com/media/FPHsTFAaIAEohAm?format=jpg&name=medium" alt=""></div>
+        <div class="image"><img src="https://pbs.twimg.com/media/Fo0mT68aQAA_c4B?format=jpg&name=360x360" alt=""></div>
+    </div>
+    <div class="popup-image">
+        <span> &times; </span>
+        <img src="https://pbs.twimg.com/media/FPcDcayacAA7xm7?format=jpg&name=medium" alt="">
+        
+    </div>
+
+    <!-- <div class="popup-image">
+        <span> &times; </span> 
+        <img src="https://images.unsplash.com/photo-1563208723-56a924c9f8b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Ym9sbHl3b29kJTIwYWN0cmVzcyUyMGFsaWF8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60" alt="">
+        
+    </div> -->
+
+    </div>
+    <script>
+        document.querySelectorAll('.image-contener img').forEach(image =>{
+           image.onclick = () =>{
+            document.querySelector('.popup-image').style.display ='block';
+            document.querySelector('.popuo-image img') .src = image.getAttribute('src');
+           } 
+        });
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display ='none';
+        }
+
+    </script>
+</body>
+</html>
